@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Fragment} from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+
+import Login from './Paginas/auth/login';
+import CrearCuenta from './Paginas/auth/CrearCuenta';
+import Index from './Paginas/auth/Index';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Router>
+        <Routes>
+          <Route path='/login' exact element={<Login/>}/>
+          <Route path='/crear-cuenta' exact element={<CrearCuenta/>}/>
+          <Route path='/index' exact element={<Index/>}/>
+         
+        </Routes>
+      </Router>
+    </Fragment>
   );
 }
 
