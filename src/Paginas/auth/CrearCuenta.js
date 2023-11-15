@@ -17,7 +17,7 @@ const CrearCuenta = () => {
         <img src="logos.png" alt className="logo" />
       </a>
       <ul>
-      <li><Link to={"/index"} className="active" >Inicio</Link></li>
+        <li><Link to={"#"}className="active" >Inicio</Link></li>
         <li><Link to={"/index"}>Nosotros</Link></li>
         <li><Link to={"#"}>Servicios</Link></li>
         <li><Link to={"#"}>Portafolio</Link></li>
